@@ -1,0 +1,575 @@
+body {
+  
+    overflow: hidden; 
+	
+}
+html {
+    overflow: hidden;
+}
+
+#containertitluF{
+    left:50%;
+    position:relative;	
+}
+#titluF{
+    background:url(backgroundtitlu.png);
+	background-size:100%;
+	background-image:no-repeat;
+	color:rgb(255,255,255);
+    text-align:center;
+    position:relative;	
+	z-index: 90;
+}
+#footerF{ 
+	position:relative;
+	z-index:95;
+}
+#containerscalaF{   
+    position: relative;
+	color:purple;
+	z-index: 5;
+}
+#scalafixaF{   
+	border:red;
+    color:purple;
+    background:url(scala_fixa1.png);	
+    position: relative;
+	background-size:100% ;
+    background-repeat: no-repeat;	
+	z-index: 10;
+	}
+#scalamobilaF{ 
+	border:red;
+	border-radius: 100%;
+    color:purple;
+    background:url(scala_noua_3.png);	
+    position: relative;	
+    background-size:100% ;
+	background-repeat: no-repeat;
+	z-index: 10;
+	}
+#displayisoF{
+	background:transparent; 
+    position:relative;
+	border-style:none;
+	z-index:90;
+}
+#butonisoF{
+	text-align:center;
+	background:rgb(32,111,219);
+	background-image:url(steleisoMare.png);
+	background-size:900%;
+	color:rgb(255,255,255);
+	text-decoration:none;
+	border-style:none;
+	position:relative;
+	border-radius:100%;
+	border-width:0px;
+	z-index:90;
+}
+#displaysF{
+	background:transparent; 
+    position:relative;
+	border-style:none;
+	z-index: 90;
+}
+#butonsF{
+	background:rgb(32,111,219);
+	color:rgb(255,255,255);
+	position:relative;
+	text-align:center;
+	border-style:none;
+	border-radius:100%;
+	border-width:0px;
+	z-index: 90;
+}
+#displayevF{
+	background:rgb(255,255,102);
+	color:black;
+	text-align:center;
+	border-style:none;
+	border-radius:100%;
+	border-width:0px;
+	position:relative;
+	z-index: 90;
+}
+#textevF{
+	color:rgb(255,255,255);
+	background:transparent; 
+    position:relative;
+	border-style:none;
+	text-align:center;
+	z-index:90;
+	}
+#butonprincipalF{   
+	background:url(iris2.png);
+	background-size:1000%;
+	color:black;
+	border-style:none;
+	border-radius:100%;
+	position:relative;
+	z-index:90;
+	}
+#containersetariF{ 
+    position:relative;
+	background:purple;
+	z-index:90;
+	}
+#containersetari2F{
+    background:url(backgroundcalibrare.png);
+	background-size:100%;
+    position:relative;	
+	z-index: 90;
+	}
+#butonsetariF{
+	color:rgb(255,255,102);
+	text-align:center;
+	border-radius:100%;
+	border-style:none;
+	background:blue; 
+	background-image:url(gear.png);
+	background-size:100%;
+	position:relative;
+	z-index: 95;
+}
+
+#containerselectFISO{
+	background:rgba(75,75,75,0.2);
+	position:relative;
+	z-index:99;
+}
+#selectFISO{
+	z-index:100;
+	left:25%;
+	width:50%;
+	position:relative
+}
+
+#containerselectSF{
+	background:rgba(75,75,75,0.2);
+	position:relative;
+	z-index:99;
+}
+#selectSF{
+	z-index:100;
+	left:25%;
+	width:50%;
+	position:relative
+}
+
+#containerselectISOS{
+	background:rgba(75,75,75,0.2);
+	position:relative;
+	z-index:99;
+}
+#selectISOS{
+	z-index:100;
+	left:25%;
+	width:50%;
+	position:relative
+}
+
+#containerselectFS{
+	background:rgba(75,75,75,0.2);
+	position:relative;
+	z-index:99;
+}
+#selectFS{
+	z-index:100;
+	left:25%;
+	width:50%;
+	position:relative
+}
+
+#containerselectSISO{
+	background:rgba(75,75,75,0.2);
+	position:relative;
+	z-index:99;
+}
+#selectSISO{
+	z-index:100;
+	left:25%;
+	width:50%;
+	position:relative
+}
+
+#containerselectISOF{
+	background:rgba(75,75,75,0.2);
+	position:relative;
+	z-index:99;
+}
+#selectISOF{
+	z-index:100;
+	left:25%;
+	width:50%;
+	position:relative
+}
+
+#containersetF{
+	background:rgba(75,75,75,0.2);
+	position:relative;
+	z-index:99;
+}
+#setF{
+	z-index:100;
+	left:25%;
+	width:50%;
+	position:relative
+}
+
+#containersetS{
+	background:rgba(75,75,75,0.2);
+	position:relative;
+	z-index:99;
+}
+#setS{
+	z-index:100;
+	left:25%;
+	width:50%;
+	position:relative
+}
+
+#containersetISO{
+	background:rgba(75,75,75,0.2);
+	position:relative;
+	z-index:99;
+}
+#setISO{
+	z-index:100;
+	left:25%;
+	width:50%;
+	position:relative
+}
+
+#containertxtcalibrare1{
+	width:100%;
+	position:relative;
+	background:rgb(32,111,219);
+	color:white;
+	text-align:center;
+	z-index:90;
+}
+#containertxtcalibrare2{
+	width:100%;
+	position:relative;
+	background:rgb(32,111,219);
+	color:white;
+	text-align:center;
+	z-index:90;
+}
+#containertxtcalibrare3{
+	width:100%;
+	position:relative;
+	background:rgb(32,111,219);
+	color:white;
+	text-align:center;
+	z-index:90;
+}
+
+#txtcalibrare1{
+    width:50%;
+    padding:0px 0px 0px 0px ;
+    border-bottom-color:rgb(255,0,0);
+    border:solid;
+    background:rgb(255,255,102);
+    position:relative;
+}
+#txtcalibrare2{
+    width:50%;
+    padding:0px 0px 0px 0px ;
+    border-bottom-color:rgb(255,0,0);
+    border:solid;
+    background:rgb(255,255,102);
+    position:relative;
+}
+#txtcalibrare3{
+    width:50%;
+    padding:0px 0px 0px 0px ;
+    border-bottom-color:rgb(255,0,0);
+    border:solid;
+    background:rgb(255,255,102);
+    position:relative;
+}
+
+.hidden {
+ display: none; 
+ }
+.visible {
+ display: block; 
+ }
+.butoniso{
+ padding:0 0 0 0;
+ border-bottom-color:rgb(255,0,0);
+ border:solid;
+ background:rgb(255,255,102);
+ position:relative;
+ }
+.butons{
+ padding:0 0 0 0;
+ border-bottom-color:rgb(255,0,0);
+ border:solid;
+ background:rgb(255,255,102);
+ position:relative;
+ z-index:100;
+ }
+.plusminus{
+	left:50%;
+	border:solid;
+	position:relative;
+	padding:0px 0px 0px 0px ;
+} 
+
+#containertitluS{
+    left:50%;
+    position:relative;	
+}
+#titluS{
+    background:url(backgroundtitlu.png);
+	background-size:100%;
+	background-image:no-repeat;
+	color:rgb(255,255,255);
+    text-align:center;
+    position:relative;	
+	z-index: 90;
+}
+#footerS{ 
+	position:relative;
+	z-index:95;
+}
+#containerscalaS{   
+    position: relative;
+	color:purple;
+	z-index: 5;
+}
+#scalafixaS{   
+	border:red;
+    color:purple;
+    background:url(scala_fixa1.png);	
+    position: relative;
+	background-size:100% ;
+    background-repeat: no-repeat;	
+	z-index: 10;
+	}
+#scalamobilaS{ 
+	border:red;
+	border-radius: 100%;
+    color:purple;
+    background:url(scala_noua_3.png);	
+    position: relative;	
+    background-size:100% ;
+	position:relative;
+	background-repeat: no-repeat;
+	z-index: 10;
+	}
+#displayisoS{
+	background:transparent; 
+    position:relative;
+	border-style:none;
+	z-index:90;
+}
+#butonisoS{
+	text-align:center;
+	background:rgb(32,111,219);
+	background-image:url(steleisoMare.png);
+	background-size:900%;
+	color:rgb(255,255,255);
+	text-decoration:none;
+	border-style:none;
+	position:relative;
+	border-radius:100%;
+	border-width:0px;
+	z-index:90;
+}
+#displayfS{
+	background:transparent; 
+    position:relative;
+	border-style:none;
+	z-index: 90;
+}
+#butonfS{
+	background:rgb(32,111,219);
+	color:rgb(255,255,255);
+	position:relative;
+	text-align:center;
+	border-style:none;
+	border-radius:100%;
+	border-width:0px;
+	z-index: 90;
+} 
+#displayevS{
+    background:rgb(255,255,102);
+	color:black;
+	text-align:center;
+	border-style:none;
+	border-radius:100%;
+	border-width:0px;
+	position:relative;
+	z-index: 90;
+}
+#textevS{
+	color:rgb(255,255,255);
+	background:transparent; 
+    position:relative;
+	border-style:none;
+	text-align:center;
+	z-index:90;
+	}
+#butonprincipalS{
+    background:rgb(255,255,102);
+	background-size:1000%;
+	color:black;
+	border-style:none;
+	border-radius:100%;
+	position:relative;
+	z-index:90;
+	}
+#containersetariS{ 
+    position:relative;
+	background:purple;
+	z-index:90;
+	}
+#containersetari2S{
+    background:url(backgroundcalibrare.png);
+	background-size:100%;
+    position:relative;	
+	z-index: 90;
+	}
+#butonsetariS{
+    color:rgb(255,255,102);
+	text-align:center;
+	border-radius:100%;
+	border-style:none;
+	background:blue; 
+    background-image:url(gear.png);
+	background-size:100%;
+	position:relative;
+	z-index: 95;
+}
+
+
+
+#containertitluISO{
+    left:50%;
+    position:relative;	
+}
+#titluISO{
+    background:url(backgroundtitlu.png);
+	background-size:100%;
+	background-image:no-repeat;
+	color:rgb(255,255,255);
+    text-align:center;
+    position:relative;	
+	z-index: 90;
+}
+#footerF{ 
+	position:relative;
+	z-index:95;
+}
+#containerscalaISO{   
+    position: relative;
+	color:purple;
+	z-index: 5;
+}
+#scalafixaISO{   
+	border:red;
+    color:purple;
+    background:url(scala_fixa1.png);	
+    position: relative;
+	background-size:100% ;
+    background-repeat: no-repeat;	
+	z-index: 10;
+	}
+#scalamobilaISO{ 
+	border:red;
+	border-radius: 100%;
+    color:purple;
+    background:url(scala_iso_1.png);	
+    position: relative;	
+    background-size:100% ;
+	background-repeat: no-repeat;
+	z-index: 10;
+	}
+#displayfISO{
+	background:transparent; 
+    position:relative;
+	border-style:none;
+	z-index:90;
+}
+#butonfISO{
+	text-align:center;
+	background:rgb(32,111,219);
+	background-image:url(iris3a.png);
+	background-size:1000%;
+	color:rgb(255,255,255);
+	text-decoration:none;
+	border-style:none;
+	position:relative;
+	border-radius:100%;
+	border-width:0px;
+	z-index:90;
+}
+#displaysISO{
+	background:transparent; 
+    position:relative;
+	border-style:none;
+	z-index: 90;
+}
+#butonsISO{
+	background:rgb(32,111,219);
+	color:rgb(255,255,255);
+	position:relative;
+	text-align:center;
+	border-style:none;
+	border-radius:100%;
+	border-width:0px;
+	z-index: 90;
+}
+#displayevISO{
+    background:rgb(255,255,102);
+	color:black;
+	text-align:center;
+	border-style:none;
+	border-radius:100%;
+	border-width:0px;
+	position:relative;
+	z-index: 90;
+}
+#textevISO{
+	color:rgb(255,255,255);
+	background:transparent; 
+    position:relative;
+	border-style:none;
+	text-align:center;
+	z-index:90;
+	}
+#butonprincipalISO{
+    background:url(steleiso.png);
+	background-size:900%;
+	color:black;
+	border-style:none;
+	border-radius:100%;
+	position:relative;
+	z-index:90;
+	}
+#containersetariISO{ 
+   position:relative;
+	background:purple;
+	z-index:90;
+	}
+#containersetari2ISO{
+    background:url(backgroundcalibrare.png);
+	background-size:100%;
+    position:relative;	
+	z-index: 90;
+	}
+#butonsetariISO{
+    color:rgb(255,255,102);
+	text-align:center;
+	border-radius:100%;
+	border-style:none;
+	background:blue;  
+	background-image:url(gear.png);	
+	background-size:100%;
+	position:relative;
+	z-index: 95;
+}

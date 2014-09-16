@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="jquery-1.11.0.min.js" type="text/javascript"></script>
+<link href="jquery.mobile-1.4.3.min.css" rel="stylesheet" type="text/css">
+<script src="jquery.mobile-1.4.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="EMETRU.css"/>
+
+
+<script type="text/javascript">
+
+//la initiere                 
+    window.onload = startCalc; 
+	
+//ruleaza nonstop
+	
+	function startCalc(){
+    interval = setInterval("ecran()",1);   //de scos dupa teste
+	interval = setInterval("calc1()",1);
+	interval = setInterval("calc2()",1);
+	interval = setInterval("calc3()",1);
+	}
+	
+//responsive stuff	
+
+
+
+	function ecran(){
+		var width1 = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+		var height1 = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+	    var height2 = width1*1.78;
+		 
+		//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\	
+				//          clasa buton iso  !!! 
+		 
+		var btnxiso = document.getElementsByClassName("butoniso");
+		var btnxs = document.getElementsByClassName("butons");
+		var btnxpls = document.getElementsByClassName("plusminus");
+        var i;
+        for (i = 0; i < btnxiso.length; i++)
+			{
+			btnxiso[i].style.height=(height2*0.08)+"px";
+            }
+		var j;
+        for (j = 0; j < btnxiso.length; j++)
+			{
+			btnxiso[j].style.marginBottom=(-height2*0.022)+"px";
+            }
+        var k;
+        for (k = 0; k < btnxiso.length; k++)
+			{
+			btnxiso[k].style.borderWidth=(width1*0.01)+"px";
+            }			
+		var q;
+        for (q = 0; q < btnxiso.length; q++)
+			{
+			btnxiso[q].style.fontSize=(width1*0.06)+"px";
+            }
+        var n;
+        for (n = 0; n < btnxiso.length; n++)
+			{
+			btnxiso[n].style.borderRadius=(width1*0.025)+"px";
+            }
+		// butons /////////////////////
+		var is1;
+        for (is1 = 0; is1 < btnxs.length; is1++)
+			{
+			btnxs[is1].style.height=(height2*0.048)+"px";
+            }
+		var js1;
+        for (js1 = 0; js1 < btnxs.length; js1++)
+			{
+			btnxs[js1].style.marginBottom=(-height2*0.019)+"px";
+            }
+        var ks;
+        for (ks = 0; ks < btnxs.length; ks++)
+			{
+			btnxs[ks].style.borderWidth=(width1*0.01)+"px";
+            }			
+		var qs;
+        for (qs = 0; qs < btnxs.length; qs++)
+			{
+			btnxs[qs].style.fontSize=(width1*0.048)+"px";
+            }
+        var ns;
+        for (ns = 0; ns < btnxs.length; ns++)
+			{
+			btnxs[ns].style.borderRadius=(width1*0.020)+"px";
+            }
+			/////////// plusminus  ///////////////////
+		var ix;
+        for (ix = 0; ix < btnxpls.length; ix++)
+			{
+			btnxpls[ix].style.height=(height2*0.0525)+"px";
+            }
+		var jx;
+        for (jx = 0; jx < btnxpls.length; jx++)
+			{
+			btnxpls[jx].style.marginBottom=(height2*0.011)+"px";
+            }
+        var kx;
+        for (kx = 0; kx < btnxpls.length; kx++)
+			{
+			btnxpls[kx].style.borderWidth=(width1*0.01)+"px";
+            }			
+		var qx;
+        for (qx = 0; qx < btnxpls.length; qx++)
+			{
+			btnxpls[qx].style.fontSize=(width1*0.06)+"px";
+            }
+        var nx;
+        for (nx = 0; nx < btnxpls.length; nx++)
+			{
+			btnxpls[nx].style.borderRadius=(width1*0.015)+"px";
+            }
+		var yx;
+		for (yx = 0; yx < btnxpls.length; yx++)
+			{
+			btnxpls[yx].style.marginTop=(-height2*0.016)+"px";
+            }
+			
+	//marime pagini
+		document.getElementById('paginaF').style.width= (width1)+'px';
+		document.getElementById('paginaS').style.width= (width1)+'px';
+		document.getElementById('paginaISO').style.width= (width1)+'px';
+		
+		document.getElementById('mainF').style.width= (width1)+'px';
+		document.getElementById('mainS').style.width= (width1)+'px';
+		document.getElementById('mainISO').style.width= (width1)+'px';
+		
+	//height pt teste
+		document.getElementById('paginaF').style.height= (height2)+'px';
+		document.getElementById('paginaS').style.height= (height2)+'px';
+		document.getElementById('paginaISO').style.height= (height2)+'px';  //de modificat toate 3
+		
+		document.getElementById('mainF').style.height= (height2)+'px';
+		document.getElementById('mainS').style.height= (height2)+'px';
+		document.getElementById('mainISO').style.height= (height2)+'px';
+		
+	//div container pt scale 3 bucati	
+		
+		//pagina 1 //////////////////////////////////////////////////////////////////////////
+			//titlu
+				document.getElementById('footerF').style.height= (width1*0.116)+"px";
+				
+				document.getElementById('containertitluF').style.width= (width1*0.68)+"px";
+				document.getElementById('containertitluF').style.height= (width1*0.12)+"px";
+				
+				document.getElementById('titluF').style.left= (-width1*0.34)+"px";
+				document.getElementById('titluF').style.height= (width1*0.096)+"px";
+				document.getElementById('titluF').style.paddingTop= (width1*0.02)+"px";
+				document.getElementById('titluF').style.fontSize= (width1*0.06)+"px";
+				
+			//buton setari
+			
+				document.getElementById('containersetariF').style.width= (width1*0.3)+"px";
+				document.getElementById('containersetariF').style.height= (height2*0.08)+"px";
+				document.getElementById('containersetariF').style.left= (-width1*0.15)+"px";
+				document.getElementById('containersetariF').style.top= (height2*0.935)+"px";
+				
+				document.getElementById('containersetari2F').style.width= (width1*0.3)+"px";
+				document.getElementById('containersetari2F').style.height= (width1*0.14)+"px";
+				document.getElementById('containersetari2F').style.top= (-width1*0.13)+"px";
+				
+				document.getElementById('butonsetariF').style.top= (height2*0.01)+"px";
+				document.getElementById('butonsetariF').style.left= (width1*0.1)+"px";
+				document.getElementById('butonsetariF').style.width= (width1*0.10)+"px";
+				document.getElementById('butonsetariF').style.height= (width1*0.10)+"px";
+				
+		    //container scala 1
+				document.getElementById('containerscalaF').style.width= (width1)+"px";
+				document.getElementById('containerscalaF').style.height= (height2)+"px";
+				document.getElementById('containerscalaF').style.marginBottom= (-height2)+"px";
+				
+			//scala pagina 1
+				//scala fixa 1
+					document.getElementById('scalafixaF').style.width= (width1*3)+"px";
+					document.getElementById('scalafixaF').style.height= (width1*3)+"px";
+					document.getElementById('scalafixaF').style.marginBottom= (-width1*3)+"px";
+				
+				//scala mobila 1
+					document.getElementById('scalamobilaF').style.left= (width1*0.2)+"px";
+					document.getElementById('scalamobilaF').style.top= (width1*0.2)+"px";
+					document.getElementById('scalamobilaF').style.width= (width1*2.6)+"px";
+					document.getElementById('scalamobilaF').style.height= (width1*2.6)+"px";
+					document.getElementById('scalamobilaF').style.marginBottom= (-width1*2.6)+"px";
+			
+			//buton iso din F				
+				document.getElementById('butonisoF').style.top= (height2*0.03)+"px";
+				document.getElementById('butonisoF').style.left= (width1*0.1)+"px";
+				document.getElementById('butonisoF').style.width= (width1*0.25)+"px";
+				document.getElementById('butonisoF').style.height= (width1*0.25)+"px";
+				document.getElementById('butonisoF').style.fontSize= (width1*0.09)+"px";
+				
+			// afisare iso din F	
+				document.getElementById('displayisoF').style.top= (-width1*0.170)+"px";
+				document.getElementById('displayisoF').style.left= (width1*0.36)+"px";
+				document.getElementById('displayisoF').style.width= (width1*0.25)+"px";
+				document.getElementById('displayisoF').style.height= (width1*0.1)+"px";
+				document.getElementById('displayisoF').style.fontSize= (width1*0.08)+"px";
+				
+			//buton s din F				
+				document.getElementById('butonsF').style.top= (-height2*0.06)+"px";
+				document.getElementById('butonsF').style.left= (width1*0.05)+"px";
+				document.getElementById('butonsF').style.width= (width1*0.15)+"px";
+				document.getElementById('butonsF').style.height= (width1*0.15)+"px";
+				document.getElementById('butonsF').style.fontSize= (width1*0.07)+"px";
+				document.getElementById('butonsF').style.paddingTop= (width1*0.03)+"px";
+				
+			// afisare s din F	
+				document.getElementById('displaysF').style.top= (-width1*0.272)+"px";
+				document.getElementById('displaysF').style.left= (width1*0.2)+"px";
+				document.getElementById('displaysF').style.width= (width1*0.25)+"px";
+				document.getElementById('displaysF').style.height= (height2*0.063)+"px";
+				document.getElementById('displaysF').style.fontSize= (width1*0.06)+"px";
+                				
+			//eticheta EV din F				
+			    document.getElementById('textevF').style.top= (-width1*0.19)+"px";
+				document.getElementById('textevF').style.left= (width1*0.7)+"px";
+				document.getElementById('textevF').style.width= (width1*0.15)+"px";
+				document.getElementById('textevF').style.height= (width1*0.15)+"px";
+				document.getElementById('textevF').style.fontSize= (width1*0.07)+"px";
+				
+			// afisare EV din F	
+			    document.getElementById('displayevF').style.top= (-width1*0.36)+"px";
+				document.getElementById('displayevF').style.left= (width1*0.83)+"px";
+				document.getElementById('displayevF').style.width= (width1*0.13)+"px";
+				document.getElementById('displayevF').style.height= (width1*0.13)+"px";
+				document.getElementById('displayevF').style.fontSize= (width1*0.06)+"px";	
+				
+			//buton F principal din F				
+				document.getElementById('butonprincipalF').style.top= (-height2*0.15)+"px";
+				document.getElementById('butonprincipalF').style.left= (width1*0.53)+"px";
+				document.getElementById('butonprincipalF').style.width= (width1*0.42)+"px";
+				document.getElementById('butonprincipalF').style.height= (width1*0.42)+"px";
+				document.getElementById('butonprincipalF').style.fontSize= (width1*0.12)+"px";
+				
+			//tabel set iso din f
+				document.getElementById('containerselectISOF').style.top= (-height2*1.3)+"px";
+				document.getElementById('containerselectISOF').style.left= (-width1*0.05)+"px";
+				document.getElementById('containerselectISOF').style.width= (width1*1.1)+"px";
+				document.getElementById('containerselectISOF').style.height= (height2*1.5)+"px";
+				
+				document.getElementById('selectISOF').style.top= (height2*0.5)+"px";
+				
+			//tabel set s din f 
+			    document.getElementById('containerselectSF').style.top= (-height2*1.3)+"px";
+				document.getElementById('containerselectSF').style.left= (-width1*0.05)+"px";
+				document.getElementById('containerselectSF').style.width= (width1*1.1)+"px";
+				document.getElementById('containerselectSF').style.height= (height2*1.5)+"px";
+				
+				document.getElementById('selectSF').style.top= (height2*0.43)+"px";
+				
+			// container setari f
+				document.getElementById('containersetF').style.top= (-height2*1.3)+"px";
+				document.getElementById('containersetF').style.left= (-width1*0.05)+"px";
+				document.getElementById('containersetF').style.width= (width1*1.1)+"px";
+				document.getElementById('containersetF').style.height= (height2*1.5)+"px";
+			
+				document.getElementById('setF').style.top= (height2*0.6)+"px";
+				
+			//   container text cu + -	
+				document.getElementById('txtcalibrare1').style.height= (height2*0.1)+"px";
+				document.getElementById('txtcalibrare1').style.marginBottom= (-height2*0.1)+"px";
+				document.getElementById('txtcalibrare1').style.borderWidth=(width1*0.01)+"px";
+				document.getElementById('txtcalibrare1').style.fontSize=(width1*0.1)+"px";
+				document.getElementById('txtcalibrare1').style.borderRadius=(width1*0.015)+"px";
+				
+				document.getElementById('containertxtcalibrare1').style.height= (height2*0.3)+"px";
+				document.getElementById('containertxtcalibrare1').style.fontSize=(width1*0.08)+"px";
+				document.getElementById('containertxtcalibrare1').style.borderRadius=(width1*0.015)+"px";
+				
+				
+		//pagina 2 //////////////////////////////////////////////////////////////////////////
+			//titlu
+				document.getElementById('footerS').style.height= (width1*0.116)+"px";
+				
+				document.getElementById('containertitluS').style.width= (width1*0.68)+"px";
+				document.getElementById('containertitluS').style.height= (width1*0.12)+"px";
+				
+				document.getElementById('titluS').style.left= (-width1*0.34)+"px";
+				document.getElementById('titluS').style.height= (width1*0.096)+"px";
+				document.getElementById('titluS').style.paddingTop= (width1*0.02)+"px";
+				document.getElementById('titluS').style.fontSize= (width1*0.06)+"px";
+				
+			//buton setari
+			
+				document.getElementById('containersetariS').style.width= (width1*0.3)+"px";
+				document.getElementById('containersetariS').style.height= (height2*0.08)+"px";
+				document.getElementById('containersetariS').style.left= (-width1*0.15)+"px";
+				document.getElementById('containersetariS').style.top= (height2*0.935)+"px";
+				
+				document.getElementById('containersetari2S').style.width= (width1*0.3)+"px";
+				document.getElementById('containersetari2S').style.height= (width1*0.14)+"px";
+				document.getElementById('containersetari2S').style.top= (-width1*0.13)+"px";
+				
+				document.getElementById('butonsetariS').style.top= (height2*0.01)+"px";
+				document.getElementById('butonsetariS').style.left= (width1*0.1)+"px";
+				document.getElementById('butonsetariS').style.width= (width1*0.10)+"px";
+				document.getElementById('butonsetariS').style.height= (width1*0.10)+"px";
+				
+		    //container scala 2
+				document.getElementById('containerscalaS').style.width= (width1)+"px";
+				document.getElementById('containerscalaS').style.height= (height2)+"px";
+				document.getElementById('containerscalaS').style.marginBottom= (-height2)+"px";
+				
+			//scala pagina 2
+				//scala fixa 2
+					document.getElementById('scalafixaS').style.width= (width1*3)+"px";
+					document.getElementById('scalafixaS').style.height= (width1*3)+"px";
+					document.getElementById('scalafixaS').style.marginBottom= (-width1*3)+"px";
+				
+				//scala mobila 2
+					document.getElementById('scalamobilaS').style.left= (width1*0.2)+"px";
+					document.getElementById('scalamobilaS').style.top= (width1*0.2)+"px";
+					document.getElementById('scalamobilaS').style.width= (width1*2.6)+"px";
+					document.getElementById('scalamobilaS').style.height= (width1*2.6)+"px";
+					document.getElementById('scalamobilaS').style.marginBottom= (-width1*2.6)+"px";
+			
+			//buton iso din S				
+				document.getElementById('butonisoS').style.top= (height2*0.03)+"px";
+				document.getElementById('butonisoS').style.left= (width1*0.1)+"px";
+				document.getElementById('butonisoS').style.width= (width1*0.25)+"px";
+				document.getElementById('butonisoS').style.height= (width1*0.25)+"px";
+				document.getElementById('butonisoS').style.fontSize= (width1*0.09)+"px";
+				
+			// afisare iso din S	
+				document.getElementById('displayisoS').style.top= (-width1*0.170)+"px";
+				document.getElementById('displayisoS').style.left= (width1*0.36)+"px";
+				document.getElementById('displayisoS').style.width= (width1*0.25)+"px";
+				document.getElementById('displayisoS').style.height= (width1*0.1)+"px";
+				document.getElementById('displayisoS').style.fontSize= (width1*0.08)+"px";
+				
+			//buton f din S				
+				document.getElementById('butonfS').style.top= (-height2*0.06)+"px";
+				document.getElementById('butonfS').style.left= (width1*0.05)+"px";
+				document.getElementById('butonfS').style.width= (width1*0.15)+"px";
+				document.getElementById('butonfS').style.height= (width1*0.15)+"px";
+				document.getElementById('butonfS').style.fontSize= (width1*0.07)+"px";
+				document.getElementById('butonfS').style.paddingTop= (width1*0.03)+"px";
+				
+			// afisare f din S	
+				document.getElementById('displayfS').style.top= (-width1*0.272)+"px";
+				document.getElementById('displayfS').style.left= (width1*0.2)+"px";
+				document.getElementById('displayfS').style.width= (width1*0.25)+"px";
+				document.getElementById('displayfS').style.height= (height2*0.063)+"px";
+				document.getElementById('displayfS').style.fontSize= (width1*0.06)+"px";
+                				
+			//eticheta EV din S				
+			    document.getElementById('textevS').style.top= (-width1*0.19)+"px";
+				document.getElementById('textevS').style.left= (width1*0.7)+"px";
+				document.getElementById('textevS').style.width= (width1*0.15)+"px";
+				document.getElementById('textevS').style.height= (width1*0.15)+"px";
+				document.getElementById('textevS').style.fontSize= (width1*0.07)+"px";
+				
+			// afisare EV din S	
+			    document.getElementById('displayevS').style.top= (-width1*0.36)+"px";
+				document.getElementById('displayevS').style.left= (width1*0.83)+"px";
+				document.getElementById('displayevS').style.width= (width1*0.13)+"px";
+				document.getElementById('displayevS').style.height= (width1*0.13)+"px";
+				document.getElementById('displayevS').style.fontSize= (width1*0.06)+"px";	
+				
+			//buton S principal din S				
+				document.getElementById('butonprincipalS').style.top= (-height2*0.15)+"px";
+				document.getElementById('butonprincipalS').style.left= (width1*0.53)+"px";
+				document.getElementById('butonprincipalS').style.width= (width1*0.42)+"px";
+				document.getElementById('butonprincipalS').style.height= (width1*0.42)+"px";
+				document.getElementById('butonprincipalS').style.fontSize= (width1*0.1)+"px";
+				
+			//tabel set iso din s
+				document.getElementById('containerselectISOS').style.top= (-height2*1.3)+"px";
+				document.getElementById('containerselectISOS').style.left= (-width1*0.05)+"px";
+				document.getElementById('containerselectISOS').style.width= (width1*1.1)+"px";
+				document.getElementById('containerselectISOS').style.height= (height2*1.5)+"px";
+				
+				document.getElementById('selectISOS').style.top= (height2*0.5)+"px";
+				
+			//tabel set f din s 
+			    document.getElementById('containerselectFS').style.top= (-height2*1.3)+"px";
+				document.getElementById('containerselectFS').style.left= (-width1*0.05)+"px";
+				document.getElementById('containerselectFS').style.width= (width1*1.1)+"px";
+				document.getElementById('containerselectFS').style.height= (height2*1.5)+"px";
+				
+				document.getElementById('selectFS').style.top= (height2*0.43)+"px";	
+			
+			// container setari f
+				document.getElementById('containersetS').style.top= (-height2*1.3)+"px";
+				document.getElementById('containersetS').style.left= (-width1*0.05)+"px";
+				document.getElementById('containersetS').style.width= (width1*1.1)+"px";
+				document.getElementById('containersetS').style.height= (height2*1.5)+"px";
+			
+				document.getElementById('setS').style.top= (height2*0.6)+"px";
+				
+			//   container text cu + -	
+				document.getElementById('txtcalibrare2').style.height= (height2*0.1)+"px";
+				document.getElementById('txtcalibrare2').style.marginBottom= (-height2*0.1)+"px";
+				document.getElementById('txtcalibrare2').style.borderWidth=(width1*0.01)+"px";
+				document.getElementById('txtcalibrare2').style.fontSize=(width1*0.1)+"px";
+				document.getElementById('txtcalibrare2').style.borderRadius=(width1*0.015)+"px";
+				
+				document.getElementById('containertxtcalibrare2').style.height= (height2*0.3)+"px";
+				document.getElementById('containertxtcalibrare2').style.fontSize=(width1*0.08)+"px";
+				document.getElementById('containertxtcalibrare2').style.borderRadius=(width1*0.015)+"px";
+				
+				
+		//pagina 3 //////////////////////////////////////////////////////////////////////////
+			//titlu
+				document.getElementById('footerISO').style.height= (width1*0.116)+"px";
+				
+				document.getElementById('containertitluISO').style.width= (width1*0.68)+"px";
+				document.getElementById('containertitluISO').style.height= (width1*0.12)+"px";
+				
+				document.getElementById('titluISO').style.left= (-width1*0.34)+"px";
+				document.getElementById('titluISO').style.height= (width1*0.096)+"px";
+				document.getElementById('titluISO').style.paddingTop= (width1*0.02)+"px";
+				document.getElementById('titluISO').style.fontSize= (width1*0.06)+"px";
+				
+			//buton setari
+			
+				document.getElementById('containersetariISO').style.width= (width1*0.3)+"px";
+				document.getElementById('containersetariISO').style.height= (height2*0.08)+"px";
+				document.getElementById('containersetariISO').style.left= (-width1*0.15)+"px";
+				document.getElementById('containersetariISO').style.top= (height2*0.935)+"px";
+				
+				document.getElementById('containersetari2ISO').style.width= (width1*0.3)+"px";
+				document.getElementById('containersetari2ISO').style.height= (width1*0.14)+"px";
+				document.getElementById('containersetari2ISO').style.top= (-width1*0.13)+"px";
+				
+				document.getElementById('butonsetariISO').style.top= (height2*0.01)+"px";
+				document.getElementById('butonsetariISO').style.left= (width1*0.1)+"px";
+				document.getElementById('butonsetariISO').style.width= (width1*0.10)+"px";
+				document.getElementById('butonsetariISO').style.height= (width1*0.10)+"px";
+				
+		    //container scala 3
+				document.getElementById('containerscalaISO').style.width= (width1)+"px";
+				document.getElementById('containerscalaISO').style.height= (height2)+"px";
+				document.getElementById('containerscalaISO').style.marginBottom= (-height2)+"px";
+				
+			//scala pagina 3
+				//scala fixa 3
+					document.getElementById('scalafixaISO').style.width= (width1*3)+"px";
+					document.getElementById('scalafixaISO').style.height= (width1*3)+"px";
+					document.getElementById('scalafixaISO').style.marginBottom= (-width1*3)+"px";
+				
+				//scala mobila 3
+					document.getElementById('scalamobilaISO').style.left= (width1*0.2)+"px";
+					document.getElementById('scalamobilaISO').style.top= (width1*0.2)+"px";
+					document.getElementById('scalamobilaISO').style.width= (width1*2.6)+"px";
+					document.getElementById('scalamobilaISO').style.height= (width1*2.6)+"px";
+					document.getElementById('scalamobilaISO').style.marginBottom= (-width1*2.6)+"px";
+			
+			//buton f din ISO				
+				document.getElementById('butonfISO').style.top= (height2*0.03)+"px";
+				document.getElementById('butonfISO').style.left= (width1*0.1)+"px";
+				document.getElementById('butonfISO').style.width= (width1*0.25)+"px";
+				document.getElementById('butonfISO').style.height= (width1*0.25)+"px";
+				document.getElementById('butonfISO').style.fontSize= (width1*0.09)+"px";
+				
+			// afisare f din ISO	
+				document.getElementById('displayfISO').style.top= (-width1*0.170)+"px";
+				document.getElementById('displayfISO').style.left= (width1*0.36)+"px";
+				document.getElementById('displayfISO').style.width= (width1*0.25)+"px";
+				document.getElementById('displayfISO').style.height= (width1*0.1)+"px";
+				document.getElementById('displayfISO').style.fontSize= (width1*0.08)+"px";
+				
+			//buton s din ISO				
+				document.getElementById('butonsISO').style.top= (-height2*0.06)+"px";
+				document.getElementById('butonsISO').style.left= (width1*0.05)+"px";
+				document.getElementById('butonsISO').style.width= (width1*0.15)+"px";
+				document.getElementById('butonsISO').style.height= (width1*0.15)+"px";
+				document.getElementById('butonsISO').style.fontSize= (width1*0.07)+"px";
+				document.getElementById('butonsISO').style.paddingTop= (width1*0.03)+"px";
+				
+			// afisare s din ISO	
+				document.getElementById('displaysISO').style.top= (-width1*0.272)+"px";
+				document.getElementById('displaysISO').style.left= (width1*0.2)+"px";
+				document.getElementById('displaysISO').style.width= (width1*0.25)+"px";
+				document.getElementById('displaysISO').style.height= (height2*0.063)+"px";
+				document.getElementById('displaysISO').style.fontSize= (width1*0.06)+"px";
+                				
+			//eticheta EV din ISO			
+			    document.getElementById('textevISO').style.top= (-width1*0.19)+"px";
+				document.getElementById('textevISO').style.left= (width1*0.7)+"px";
+				document.getElementById('textevISO').style.width= (width1*0.15)+"px";
+				document.getElementById('textevISO').style.height= (width1*0.15)+"px";
+				document.getElementById('textevISO').style.fontSize= (width1*0.07)+"px";
+				
+			// afisare EV din ISO
+			    document.getElementById('displayevISO').style.top= (-width1*0.36)+"px";
+				document.getElementById('displayevISO').style.left= (width1*0.83)+"px";
+				document.getElementById('displayevISO').style.width= (width1*0.13)+"px";
+				document.getElementById('displayevISO').style.height= (width1*0.13)+"px";
+				document.getElementById('displayevISO').style.fontSize= (width1*0.06)+"px";	
+				
+			//buton ISO principal din ISO				
+				document.getElementById('butonprincipalISO').style.top= (-height2*0.15)+"px";
+				document.getElementById('butonprincipalISO').style.left= (width1*0.53)+"px";
+				document.getElementById('butonprincipalISO').style.width= (width1*0.42)+"px";
+				document.getElementById('butonprincipalISO').style.height= (width1*0.42)+"px";
+				document.getElementById('butonprincipalISO').style.fontSize= (width1*0.1)+"px";
+				
+				
+			//tabel set f din s 
+			    document.getElementById('containerselectFISO').style.top= (-height2*1.3)+"px";
+				document.getElementById('containerselectFISO').style.left= (-width1*0.05)+"px";
+				document.getElementById('containerselectFISO').style.width= (width1*1.1)+"px";
+				document.getElementById('containerselectFISO').style.height= (height2*1.5)+"px";
+				
+				document.getElementById('selectFISO').style.top= (height2*0.43)+"px";
+				
+			//tabel set s din iso 
+			    document.getElementById('containerselectSISO').style.top= (-height2*1.3)+"px";
+				document.getElementById('containerselectSISO').style.left= (-width1*0.05)+"px";
+				document.getElementById('containerselectSISO').style.width= (width1*1.1)+"px";
+				document.getElementById('containerselectSISO').style.height= (height2*1.5)+"px";
+				
+				document.getElementById('selectSISO').style.top= (height2*0.43)+"px";		
+			
+			// container setari f
+				document.getElementById('containersetISO').style.top= (-height2*1.3)+"px";
+				document.getElementById('containersetISO').style.left= (-width1*0.05)+"px";
+				document.getElementById('containersetISO').style.width= (width1*1.1)+"px";
+				document.getElementById('containersetISO').style.height= (height2*1.5)+"px";
+			
+				document.getElementById('setISO').style.top= (height2*0.6)+"px";
+				
+			//   container text cu + -	
+				document.getElementById('txtcalibrare3').style.height= (height2*0.1)+"px";
+				document.getElementById('txtcalibrare3').style.marginBottom= (-height2*0.1)+"px";
+				document.getElementById('txtcalibrare3').style.borderWidth=(width1*0.01)+"px";
+				document.getElementById('txtcalibrare3').style.fontSize=(width1*0.1)+"px";
+				document.getElementById('txtcalibrare3').style.borderRadius=(width1*0.015)+"px";
+				
+				document.getElementById('containertxtcalibrare3').style.height= (height2*0.3)+"px";
+				document.getElementById('containertxtcalibrare3').style.fontSize=(width1*0.08)+"px";
+				document.getElementById('containertxtcalibrare3').style.borderRadius=(width1*0.015)+"px";
+		
+		
+  }
+
+   
+   
+//citire senzor in lux 
+	window.addEventListener('devicelight', function(event) {
+        var lux = event.value;
+		if (lux ==0) 
+		lux= 1;
+       var lux2 = Math.log(lux) / Math.log(2);
+	  var lux3 = lux2.toFixed(0);
+	  
+	  document.getElementById('transferEV1').value= lux3;
+	    
+});
+
+//butoane principale
+	function saltS(){
+    document.getElementById('paginaFA').click();
+	}
+	function saltISO(){
+    document.getElementById('paginaSA').click();
+	}
+	function saltF(){
+    document.getElementById('paginaISOA').click();
+	}
+
+
+
+  
+//display setari  
+   function isosens(divID){      //setare citire iso pagina 1
+         valoareiso1=document.getElementById(divID).innerHTML;
+		 valiso1=document.getElementById(divID).value;
+		 document.getElementById('transferISO1').value=valiso1;
+		 document.getElementById('displayisoF').value=valoareiso1;
+   }
+   function speed1s(divID){      //setare citire s   pagina 1
+         valoares1=document.getElementById(divID).innerHTML;
+		 vals1=document.getElementById(divID).value;
+		 document.getElementById('transferS1').value=vals1;
+		 document.getElementById('displaysF').value=valoares1;
+   }
+   function isosens1(divID){     //setare citire iso pagina 2
+         valoareiso2=document.getElementById(divID).innerHTML;
+		 valiso2=document.getElementById(divID).value;
+		 document.getElementById('transferISO2').value=valiso2;
+		 document.getElementById('displayisoS').value=valoareiso2;
+   }
+   function aperture2(divID){    //setare citire f   pagina 2
+         valoaref2=document.getElementById(divID).innerHTML;
+		 valf2=document.getElementById(divID).value;
+		 document.getElementById('transferF2').value=valf2;
+		 document.getElementById('displayfS').value=valoaref2;
+   }
+   function aperture(divID){     //setare citire f   pagina 3          
+         valoaref3=document.getElementById(divID).innerHTML;
+		 valf3=document.getElementById(divID).value;
+		 document.getElementById('transferF3').value=valf3;
+		 document.getElementById('displayfISO').value=valoaref3;
+   }
+   function speed1iso3(divID){      //setare citire s   pagina 1
+         valoaresISO3=document.getElementById(divID).innerHTML;
+		 valsISO3=document.getElementById(divID).value;
+		 document.getElementById('transferS3').value=valsISO3;
+		 document.getElementById('displaysISO').value=valoaresISO3;
+   }
+
+// hide unhide meniu selector 
+	function unhide(divID) {
+    var entitate = document.getElementById(divID);
+    if (entitate) {
+      entitate.className=(entitate.className=='hidden')?'visible':'hidden';
+	  
+    }
+  }
+  
+  
+  
+
+function increaseF1()
+{	
+    var calF1= document.getElementById('transfercalibrare1').value;
+	var calF2=parseInt(calF1)+1;
+	document.getElementById('transfercalibrare1').value=calF2;
+	if (calF2>0)
+	{
+	document.getElementById('txtcalibrare1').innerHTML='+'+calF2;
+	document.getElementById('txtcalibrare2').innerHTML='+'+calF2;
+	document.getElementById('txtcalibrare3').innerHTML='+'+calF2;
+	}
+	else
+	{
+	document.getElementById('txtcalibrare1').innerHTML=calF2;
+	document.getElementById('txtcalibrare2').innerHTML=calF2;
+	document.getElementById('txtcalibrare3').innerHTML=calF2;
+	}
+}
+function decreaseF1()
+{	
+    var calF3= document.getElementById('transfercalibrare1').value;
+	var calF4=parseInt(calF3)-1;
+	document.getElementById('transfercalibrare1').value=calF4;
+	if (calF4<0)
+	{
+	document.getElementById('txtcalibrare1').innerHTML=calF4;
+	document.getElementById('txtcalibrare2').innerHTML=calF4;
+	document.getElementById('txtcalibrare3').innerHTML=calF4;
+	}
+	else
+	{
+	document.getElementById('txtcalibrare1').innerHTML='+'+calF4;
+	document.getElementById('txtcalibrare2').innerHTML='+'+calF4;
+	document.getElementById('txtcalibrare3').innerHTML='+'+calF4;
+	}
+}
+function tozero()
+{
+ document.getElementById('transfercalibrare1').value=0;
+ document.getElementById('txtcalibrare1').innerHTML=0;
+ document.getElementById('txtcalibrare2').innerHTML=0;
+ document.getElementById('txtcalibrare3').innerHTML=0;
+}
+  
+  
+//computer pagian 1
+
+
+function calc1() {
+       var EVambient1 = document.getElementById('transferEV1').value;
+       var ISOselectat1 = document.getElementById('transferISO1').value;
+	   var Sselectat1 = document.getElementById('transferS1').value;
+       var EVcalibrare1= document.getElementById('transfercalibrare1').value;
+       if (EVcalibrare1 == "")
+           EVcalibrare1 = 0;
+       if (ISOselectat1 == "")
+           ISOselectat1 = 0;
+	   if (Sselectat1 == "")
+           Sselectat1 = 0;
+	   if (EVambient1 == "")
+           EVambient1 = 0;       		      	  
+       var EV1F = parseInt(Sselectat1)+parseInt(ISOselectat1)+parseInt(EVambient1)+parseInt(EVcalibrare1) ;
+	          
+       
+           document.getElementById('displayevF').value = EVambient1;
+		   
+		    
+	          var Fstop1= Math.pow(Math.sqrt(2),EV1F);
+	          var Fstop2 = Fstop1-0.2;
+			  if (Fstop1 > "6")
+			 
+             var Fstop3 = Fstop2.toFixed(0);
+		
+		    else 
+                 Fstop3 = Fstop1.toFixed(1);
+			  if ( Fstop3 == 5.7)
+			     Fstop3=5.6;
+		   
+	          if (Fstop1 < 1)
+			     Fstop3= 'LOW';
+				 
+			
+	          if (Fstop1 > 33)
+			     Fstop3= 'HI';	
+
+              if (Fstop1 > 33||Fstop1<1)	{			 
+		         document.getElementById('butonprincipalF').style.color="rgb(252,51,59)";
+				 }
+				 else 
+				 {
+				 document.getElementById('butonprincipalF').style.color="black"
+				 };
+			
+		  
+
+             
+            var discF = document.getElementById('scalamobilaF'); 
+			var irisF = document.getElementById('butonprincipalF');
+			var isoF1 = document.getElementById('butonisoF');
+			var steleFpos =document.getElementById('butonisoF').style.width;
+			var irisFpos =document.getElementById('butonprincipalF').style.width;
+            discF.style.transform = "rotate("+((parseInt(EV1F)*5)-72)+"deg)" ;
+		    irisF.style.backgroundPosition = ((-parseInt(EV1F)*parseInt(irisFpos))+(parseInt(irisFpos)*-0.010))+'px ';
+			  if (EV1F>9)
+			     {
+			     irisF.style.backgroundPosition = ((-9*parseInt(irisFpos))+(parseInt(irisFpos)*-0.01))+'px ';
+				 };
+			  if (EV1F<1)
+			     {
+			     irisF.style.backgroundPosition = 0+'px ';
+				 };
+            document.getElementById('butonprincipalF').innerHTML= Fstop3;              
+            isoF1.style.backgroundPosition = (((-parseInt(ISOselectat1)-1)*parseInt(steleFpos))+(parseInt(steleFpos)*0.005))+'px ';
+   }
+   
+   
+   
+//computer pagian 2
+
+
+function calc2() {
+       var EVambient2 = document.getElementById('transferEV1').value;
+       var ISOselectat2 = document.getElementById('transferISO2').value;
+	   var Fselectat2 = document.getElementById('transferF2').value;
+       var EVcalibrare2= document.getElementById('transfercalibrare1').value;
+       if (EVcalibrare2 == "")
+           EVcalibrare2 = 0;
+       if (ISOselectat2 == "")
+           ISOselectat2 = 0;
+	   if (Fselectat2 == "")
+           Fselectat2 = 0;
+	   if (EVambient2 == "")
+           EVambient2 = 0;       		      	  
+       var EV2S = parseInt(Fselectat2)+parseInt(ISOselectat2)+parseInt(EVambient2)+parseInt(EVcalibrare2) ;
+	          
+       
+           document.getElementById('displayevS').value = EVambient2;
+		 
+			  var Sstop1= Math.pow(2,EV2S);
+	          
+			   if (Sstop1 ==16)
+			      Sstop1 =15;
+			 else 
+			   if (Sstop1 == 32)
+				  Sstop1 =30;
+			 else 
+			   if (Sstop1 == 64)
+				  Sstop1 = 60;
+             else 
+			   if (Sstop1 == 128)
+				  Sstop1 = 125;				  
+             else 
+			   if (Sstop1 ==256)
+				  Sstop1 =250;
+			  else 
+			   if (Sstop1 == 512)
+				  Sstop1 = 500;
+			 else 
+			   if (Sstop1 == 1024)
+				  Sstop1 = 1000;
+			 else 
+			   if (Sstop1 == 2048)
+				  Sstop1 = 2000;
+			 else 
+			   if (Sstop1 == 4096)
+				  Sstop1 = 4000;
+			 else 
+			   if (Sstop1 == 8192)
+				  Sstop1 = 8000;
+			 				  
+							  
+		    
+			  if(Sstop1 > 1){
+			   document.getElementById('butonprincipalS').innerHTML= '1/'+Sstop1;}
+			  if(Sstop1 ==1){
+			   document.getElementById('butonprincipalS').innerHTML= Sstop1;}
+			  
+			  if(Sstop1 < 1)
+			  {
+			   document.getElementById('butonprincipalS').innerHTML= 1/Sstop1;
+			  
+			   if(Sstop1 ==0.0625){
+			   document.getElementById('butonprincipalS').innerHTML= '15';} 
+			  
+			   if(Sstop1 ==0.03125){
+			   document.getElementById('butonprincipalS').innerHTML= '30';}
+			   }
+	          
+			   if(Sstop1 <0.03120)
+			   document.getElementById('butonprincipalS').innerHTML= 'LOW';
+			   
+			   if(Sstop1 >8194)
+			   document.getElementById('butonprincipalS').innerHTML= 'HI';
+			  
+			   if(Sstop1 > 8194||Sstop1<0.03120)
+			   {
+			   document.getElementById('butonprincipalS').style.color="rgb(252,51,59)";
+			   }
+			   else 
+			   {
+			   document.getElementById('butonprincipalS').style.color="black"
+		       };
+			  
+            
+            var discS = document.getElementById('scalamobilaS'); 
+			var isoS = document.getElementById('butonisoS');
+			var steleSpos =document.getElementById('butonisoS').style.width;
+            discS.style.transform = "rotate("+((parseInt(EV2S)*5)-72)+"deg)" ;
+		    isoS.style.backgroundPosition = (((-parseInt(ISOselectat2)-1)*parseInt(steleSpos))+(parseInt(steleSpos)*0.005))+'px ';
+                         
+           
+   }   
+   
+   
+   
+   
+//computer pagian 3
+
+
+function calc3() {
+			var EVambient3 = document.getElementById('transferEV1').value;
+			var Fselectat3 = document.getElementById('transferF3').value;
+			var Sselectat3 = document.getElementById('transferS3').value;
+			var EVcalibrare3= document.getElementById('transfercalibrare1').value;
+				if (EVcalibrare3 == "")
+					EVcalibrare3 = 0;
+				if (Fselectat3 == "")
+					Fselectat3 = 0;
+				if (Sselectat3 == "")
+					Sselectat3 = 0;
+				if (EVambient3 == "")
+					EVambient3 = 0;       		      	  
+			var EV3ISO = parseInt(Fselectat3)+parseInt(Sselectat3)+parseInt(EVambient3)+parseInt(EVcalibrare3) ;
+	          
+				
+				document.getElementById('displayevISO').value = EVambient3;
+		        
+
+				var ISOstop3 = 100*(Math.pow(2,-EV3ISO));
+				
+				var discISO = document.getElementById('scalamobilaISO'); 
+				discISO.style.transform = "rotate("+((parseInt(EV3ISO)*5)-13.5)+"deg)" ;
+				
+				var isoISO = document.getElementById('butonprincipalISO');
+				var steleISOpos =document.getElementById('butonprincipalISO').style.width;
+				isoISO.style.backgroundPosition = (((parseInt(EV3ISO)-1)*parseInt(steleISOpos))+(parseInt(steleISOpos)*0.005))+'px ';
+				if (EV3ISO>1)
+				   {
+				   isoISO.style.backgroundPosition = 0+'px ';
+				   };
+				if (EV3ISO<-7)
+				   {
+				   isoISO.style.backgroundPosition = parseInt(steleISOpos)+'px ';
+				   };
+				document.getElementById('butonprincipalISO').innerHTML= ISOstop3; 
+				if (ISOstop3>12800||ISOstop3<50)
+				   {
+			       document.getElementById('butonprincipalISO').style.color="rgb(252,51,59)";
+			       }
+			    else 
+			       {
+			       document.getElementById('butonprincipalISO').style.color="black";
+		           };
+				if (ISOstop3 <50)
+			       document.getElementById('butonprincipalISO').innerHTML= 'HI';
+			   
+			    if (ISOstop3 >12800)
+			       document.getElementById('butonprincipalISO').innerHTML= 'LOW';  
+
+				var irisISO = document.getElementById('butonfISO');
+				var irisF3pos =document.getElementById('butonfISO').style.width;
+				irisISO.style.backgroundPosition = (((parseInt(Fselectat3))*parseInt(irisF3pos))+(parseInt(irisF3pos)*-0.002))+'px ';
+				
+				if (Fselectat3<-9)
+				   {
+				   irisISO.style.backgroundPosition = (((parseInt(Fselectat3)+1)*parseInt(irisF3pos))+(parseInt(irisF3pos)*-0.002))+'px ';
+				   }
+}
+               
+
+</script>
+</head>
+<body>
+
+            <!-- transfer valoare lux3 -->
+
+<div style="display:none" id="transferlux3">
+</div>
+    <!-- ///////////////////////// -->
+
+			<!-- pagina 1 F-->
+	 
+	<!-- ///////////////////////// -->
+	
+<div data-role="page"id="paginaF"class="ui-content"style="overflow:hidden;padding:0px 0px 0px 0px;">
+
+	
+    
+	<div data-role="main" id="mainF"style="overflow:hidden">
+	
+ 
+		
+<!--divuri animatie-->
+		
+		<div id="containerscalaF">			        					           
+			<div id="scalafixaF" >
+			</div>		           				                              
+			<div id="scalamobilaF" >
+			</div>	
+		</div>
+		
+<!--  titlu -->
+	<div id="footerF"> 
+		<div id="containertitluF">
+			<div id="titluF">
+			        EXPONOMETRU
+			</div>
+			
+ <!--  Buton setari -->
+					 
+			
+				<div id="containersetariF">
+					<div id="containersetari2F">
+						<button type="button" onclick="unhide('containersetF')"id="butonsetariF"></button>
+					</div>
+				</div>
+			
+		</div>
+	</div>	
+		
+		
+<!-- buton iso si afisaj iso -->
+		
+	
+			<button type="button" onclick="unhide('containerselectISOF')" id="butonisoF">ISO</button>
+				
+			<input type="label" value="100"id="displayisoF"  >
+		
+		
+<!--  buton viteza obturator si afisaj s -->
+			
+			
+			
+			<button type="button" onclick="unhide('containerselectSF')"id="butonsF">S</button>
+				
+			<input type="label" value="1"id="displaysF"  >
+		
+		
+		
+<!--   afisaj EV   -->
+				 	 
+		
+			<div id="textevF">
+				EV
+			</div>
+					
+			<input type="label" value="0"id="displayevF"  >
+							
+    
+<!--  BUTON catre s din f	 -->
+					
+					
+	
+			
+			<button  onclick="saltS()"id="butonprincipalF">F</button>
+		
+		
+		
+
+	    <!-- <div style="height:292px">
+        </div> -->
+		
+<!-- tabel setari partea F -->
+		
+		<div id="containersetF"class="hidden">
+			<div id="setF">
+				<div id="containertxtcalibrare1">
+					<button type="button"  id="txtcalibrare1" onclick="tozero()"style="border-color:black;color:black">0</button>
+					<button type="button" class="plusminus"onclick="increaseF1()"style="width:50%;z-index:91;border-color:black;background:rgb(102,111,219);color:red"id="butonplusF">+</button>
+					<button type="button" class="plusminus"onclick="decreaseF1()"style="width:50%;z-index:91;border-color:black;background:rgb(102,111,219);color:white"id="butonminusF">-</button>
+						Calibrte EV
+						<br>
+						touch value to set to 0
+				</div>
+				<button type="button" style="z-index:91;border-color:black;background:rgb(102,111,219);color:white"onclick="unhide('containersetF')"class="butoniso">Done</button>
+				<button type="button" style="z-index:91;border-color:black;background:rgb(102,111,219);color:white"onclick="exit"class="butoniso">Exit</button>			
+			</div>
+		</div>
+
+<!-- tabele selectie meniu F -->
+		
+		<div id="containerselectISOF" class="hidden"onclick="unhide('containerselectISOF')">
+			<div id="selectISOF">
+			<button type="button" onclick="isosens('iso50')"id="iso50"class="butoniso"style="border-color:black;background:rgb(202,111,219);color:white" value="-1">50</button>
+			<button type="button" onclick="isosens('iso100')"id="iso100"class="butoniso" style="border-color:black;background:rgb(255,255,102)"value="0">100</button>
+			<button type="button" onclick="isosens('iso200')"id="iso200"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="1">200</button>
+			<button type="button" onclick="isosens('iso400')"id="iso400"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="2">400</button>
+			<button type="button" onclick="isosens('iso800')"id="iso800"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="3">800</button>
+			<button type="button" onclick="isosens('iso1600')"id="iso1600"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="4">1600</button>
+			<button type="button" onclick="isosens('iso3200')"id="iso3200"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="5">3200</button>
+			<button type="button" onclick="isosens('iso6400')"id="iso6400"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="6">6400</button>
+			<button type="button" onclick="isosens('iso12800')"id="iso12800"class="butoniso" style="border-color:black;background:rgb(202,111,219);color:white"value="7">12800</button>
+			</div>
+		</div>
+		<div id="containerselectSF" class="hidden"onclick="unhide('containerselectSF')">
+			<div id="selectSF" >
+			<button type="button" onclick="speed1s('s30s')"id="s30s"class="butons"style="border-color:black;background:rgb(202,111,219);color:white" value="5">30</button>
+			<button type="button" onclick="speed1s('s15s')"id="s15s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="4">15</button>
+			<button type="button" onclick="speed1s('s8s')"id="s8s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="3">8</button>
+			<button type="button" onclick="speed1s('s4s')"id="s4s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="2">4</button>
+			<button type="button" onclick="speed1s('s2s')"id="s2s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="1">2</button>
+			<button type="button" onclick="speed1s('s1s')"id="s1s"class="butons"style="border-color:black;background:rgb(255,255,102);color:black" value="0">1</button>
+			<button type="button" onclick="speed1s('s12s')"id="s12s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-1">1/2</button>
+			<button type="button" onclick="speed1s('s14s')"id="s14s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-2">1/4</button>
+			<button type="button" onclick="speed1s('s18s')"id="s18s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-3">1/8</button>
+			<button type="button" onclick="speed1s('s115s')"id="s115s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-4">1/15</button>
+			<button type="button" onclick="speed1s('s130s')"id="s130s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-5">1/30</button>
+			<button type="button" onclick="speed1s('s160s')"id="s160s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-6">1/60</button>
+			<button type="button" onclick="speed1s('s1125s')"id="s1125s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-7">1/125</button>
+			<button type="button" onclick="speed1s('s1250s')"id="s1250s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-8">1/250</button>
+			<button type="button" onclick="speed1s('s1500s')"id="s1500s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-9">1/500</button>
+			<button type="button" onclick="speed1s('s11000s')"id="s11000s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-10">1/1000</button>
+			<button type="button" onclick="speed1s('s12000s')"id="s12000s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-11">1/2000</button>
+			<button type="button" onclick="speed1s('s14000s')"id="s14000s"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-12">1/4000</button>
+			<button type="button" onclick="speed1s('s18000s')"id="s18000s"class="butons"style="border-color:black;background:rgb(202,111,219);color:white" value="-13">1/8000</button>
+			</div>
+		</div>
+		<a id="paginaFA"href="#paginaS"data-transition="pop"></a>
+		<input type="text" id="transferISO1">
+		<input type="text" id="transferS1">
+		<input type="text" id="transferEV1">
+		<input type="text" id="transfercalibrare1" value="0">
+		
+	</div>
+</div>
+
+	<!-- ///////////////////////// -->
+
+			<!-- pagina 2 S-->	 
+	 
+    <!-- ///////////////////////// -->	 
+	 
+<div data-role="page"id="paginaS"class="ui-content"style="padding:0px 0px 0px 0px;overflow:hidden">
+
+
+
+	<div data-role="main"id="mainS"style="overflow:hidden">
+
+
+		
+<!--divuri animatie-->
+
+		<div id="containerscalaS">	
+			<div id="scalafixaS" >
+			</div>		           				                              
+			<div id="scalamobilaS" >
+			</div>	
+		</div>
+
+<!--  titlu -->
+	<div id="footerS"> 
+		<div id="containertitluS">
+			<div id="titluS">
+			        EXPONOMETRU
+			</div>
+			
+ <!--  Buton setari -->
+					 
+			
+				<div id="containersetariS">
+					<div id="containersetari2S">
+						<button type="button" onclick="unhide('containersetS')"id="butonsetariS"></button>
+					</div>
+				</div>
+			
+		</div>
+	</div>
+	
+	
+<!-- buton iso si afisaj iso -->
+		
+
+			<button type="button" onclick="unhide('containerselectISOS')"id="butonisoS">ISO</button>
+	
+			<input type="label" value="100"id="displayisoS"  >
+						
+				
+<!--  buton f obturator si afisaj f -->
+					
+		
+		
+			<button type="button" onclick="unhide('containerselectFS')"id="butonfS">f</button>
+					
+			<input type="label" value="4"id="displayfS">
+			
+			
+			
+<!--   afisaj EV   -->
+				 			 
+
+			<div id="textevS">
+				EV
+			</div>
+					
+			<input type="label" value="0"id="displayevS"  >
+				
+
+<!--  BUTON catre iso din s	 -->
+										
+		
+		
+		
+			<button type="button" onclick="saltISO()"id="butonprincipalS">S</button>
+       
+		
+		
+
+		<!-- <div style="height:292px">
+        </div> -->
+		
+<!-- tabel setari partea s -->
+		
+		<div id="containersetS"class="hidden">
+			<div id="setS">
+				<div id="containertxtcalibrare2">
+					<button type="button"  id="txtcalibrare2" onclick="tozero()"style="border-color:black;color:black">0</button>
+					<button type="button" class="plusminus"onclick="increaseF1()"style="width:50%;z-index:91;border-color:black;background:rgb(102,111,219);color:red"id="butonplusS">+</button>
+					<button type="button" class="plusminus"onclick="decreaseF1()"style="width:50%;z-index:91;border-color:black;background:rgb(102,111,219);color:white"id="butonminusS">-</button>
+						Calibrte EV
+						<br>
+						touch value to set to 0
+				</div>
+				<button type="button" style="z-index:91;border-color:black;background:rgb(102,111,219);color:white"onclick="unhide('containersetS')"class="butoniso">Done</button>
+				<button type="button" style="z-index:91;border-color:black;background:rgb(102,111,219);color:white"onclick="exit"class="butoniso">Exit</button>		
+			</div>
+		</div>		
+
+<!-- tabele selectie meniu S -->
+		
+		<div id="containerselectISOS"class="hidden"onclick="unhide('containerselectISOS')">
+			<div id="selectISOS">
+			<button type="button" onclick="isosens1('iso50s')"id="iso50s"class="butoniso"style="border-color:black;background:rgb(202,111,219);color:white" value="-1">50</button>
+			<button type="button" onclick="isosens1('iso100s')"id="iso100s"class="butoniso" style="border-color:black;background:rgb(255,255,102)"value="0">100</button>
+			<button type="button" onclick="isosens1('iso200s')"id="iso200s"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="1">200</button>
+			<button type="button" onclick="isosens1('iso400s')"id="iso400s"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="2">400</button>
+			<button type="button" onclick="isosens1('iso800s')"id="iso800s"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="3">800</button>
+			<button type="button" onclick="isosens1('iso1600s')"id="iso1600s"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="4">1600</button>
+			<button type="button" onclick="isosens1('iso3200s')"id="iso3200s"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="5">3200</button>
+			<button type="button" onclick="isosens1('iso6400s')"id="iso6400s"class="butoniso" style="border-color:black;background:rgb(102,111,219);color:white"value="6">6400</button>
+			<button type="button" onclick="isosens1('iso12800s')"id="iso12800s"class="butoniso" style="border-color:black;background:rgb(202,111,219);color:white"value="7">12800</button>
+			</div>
+		</div>
+		<div id="containerselectFS"class="hidden"onclick="unhide('containerselectFS')">
+			<div id="selectFS">
+			<button type="button" onclick="aperture2('f1s')"id="f1s"class="butoniso"style="border-color:black;background:rgb(255,255,102);color:black" value="0">1/1</button>
+			<button type="button" onclick="aperture2('f2s')"id="f2s"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-1">1/1.4</button>
+			<button type="button" onclick="aperture2('f3s')"id="f3s"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-2">1/2</button>
+			<button type="button" onclick="aperture2('f4s')"id="f4s"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-3">1/2.8</button>
+			<button type="button" onclick="aperture2('f5s')"id="f5s"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-4">1/4</button>
+			<button type="button" onclick="aperture2('f6s')"id="f6s"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-5">1/5.6</button>
+			<button type="button" onclick="aperture2('f7s')"id="f7s"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-6">1/8</button>
+			<button type="button" onclick="aperture2('f8s')"id="f8s"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-7">1/11</button>
+			<button type="button" onclick="aperture2('f9s')"id="f9s"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-8">1/16</button>
+			<button type="button" onclick="aperture2('f10s')"id="f10s"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-9">1/22</button>
+			<button type="button" onclick="aperture2('f11s')"id="f11s"class="butoniso"style="border-color:black;background:rgb(202,111,219);color:white" value="-10">1/32</button>		
+			</div>
+		</div>
+		<a id="paginaSA"href="#paginaISO"data-transition="pop"></a>
+		<input type="text" id="transferISO2">
+		<input type="text" id="transferF2">
+		
+		
+	</div>
+</div>
+
+	<!-- ///////////////////////// -->
+
+			<!-- pagina 3 ISO-->
+	 
+	<!-- ///////////////////////// -->
+	 	 
+<div data-role="page"id="paginaISO"class="ui-content"style="padding:0px 0px 0px 0px;overflow:hidden">
+
+
+
+	<div data-role="main"id="mainISO"style="overflow:hidden">
+
+
+		
+<!--divuri animatie-->
+
+		<div id="containerscalaISO">
+			<div id="scalafixaISO" >
+			</div>		           				                              
+			<div id="scalamobilaISO" >
+			</div>	
+		</div>
+		
+<!--  titlu -->
+	<div id="footerISO"> 
+		<div id="containertitluISO">
+			<div id="titluISO">
+			        EXPONOMETRU
+			</div>
+			
+ <!--  Buton setari -->
+					 
+			
+				<div id="containersetariISO">
+					<div id="containersetari2ISO">
+						<button type="button" onclick="unhide('containersetISO')"id="butonsetariISO"></button>
+					</div>
+				</div>
+			
+		</div>
+	</div>	
+
+		
+<!-- buton f si afisaj f -->
+		
+		
+			<button type="button" onclick="unhide('containerselectFISO')"id="butonfISO">f</button>
+						
+			<input type="label" value="4"id="displayfISO"  >
+	
+				
+<!--  buton viteza obturator si afisaj s -->
+						
+		
+		
+			<button type="button" onclick="unhide('containerselectSISO')"id="butonsISO">S</button>
+					
+			<input type="label" value="1"id="displaysISO"  >
+				
+		
+		
+<!--   afisaj EV   -->
+				 				 
+		
+			<div id="textevISO">
+				EV
+			</div>
+					
+			<input type="label" value="0"id="displayevISO"  >
+	
+
+<!--  BUTON catre f din iso	 -->
+										
+		
+		
+		
+			<button type="button" onclick="saltF()"id="butonprincipalISO">ISO</button>
+     
+	 
+	 
+				
+		<!-- <div style="height:292px">
+		</div> -->
+		
+<!-- tabel setari partea iso -->
+		
+		<div id="containersetISO"class="hidden">
+			<div id="setISO">
+			    <div id="containertxtcalibrare3">
+					<button type="button"  id="txtcalibrare3" onclick="tozero()"style="border-color:black;color:black">0</button>
+					<button type="button" class="plusminus"onclick="increaseF1()"style="width:50%;z-index:91;border-color:black;background:rgb(102,111,219);color:red"id="butonplusISO">+</button>
+					<button type="button" class="plusminus"onclick="decreaseF1()"style="width:50%;z-index:91;border-color:black;background:rgb(102,111,219);color:white"id="butonminusISO">-</button>
+						Calibrte EV
+						<br>
+						touch value to set to 0
+				</div>
+				<button type="button" style="z-index:91;border-color:black;background:rgb(102,111,219);color:white"onclick="unhide('containersetISO')"class="butoniso">Done</button>
+				<button type="button" style="z-index:91;border-color:black;background:rgb(102,111,219);color:white"onclick="exit"class="butoniso">Exit</button>			
+			</div>
+		</div>
+		
+<!-- tabele selectie meniu ISO -->
+		
+		<div id="containerselectFISO"class="hidden"onclick="unhide('containerselectFISO')">
+			<div id="selectFISO">
+			<button type="button" onclick="aperture('f1iso')"id="f1iso"class="butoniso"style="border-color:black;background:rgb(255,255,102);color:black" value="0">1/1</button>
+			<button type="button" onclick="aperture('f2iso')"id="f2iso"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-1">1/1.4</button>
+			<button type="button" onclick="aperture('f3iso')"id="f3iso"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-2">1/2</button>
+			<button type="button" onclick="aperture('f4iso')"id="f4iso"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-3">1/2.8</button>
+			<button type="button" onclick="aperture('f5iso')"id="f5iso"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-4">1/4</button>
+			<button type="button" onclick="aperture('f6iso')"id="f6iso"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-5">1/5.6</button>
+			<button type="button" onclick="aperture('f7iso')"id="f7iso"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-6">1/8</button>
+			<button type="button" onclick="aperture('f8iso')"id="f8iso"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-7">1/11</button>
+			<button type="button" onclick="aperture('f9iso')"id="f9iso"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-8">1/16</button>
+			<button type="button" onclick="aperture('f10iso')"id="f10iso"class="butoniso"style="border-color:black;background:rgb(102,111,219);color:white" value="-9">1/22</button>
+			<button type="button" onclick="aperture('f11iso')"id="f11iso"class="butoniso"style="border-color:black;background:rgb(202,111,219);color:white" value="-10">1/32</button>		
+			</div>
+		</div>
+		<div id="containerselectSISO" class="hidden"onclick="unhide('containerselectSISO')">
+			<div id="selectSISO">
+				<button type="button" onclick="speed1iso3('s30is')"id="s30is"class="butons"style="border-color:black;background:rgb(202,111,219);color:white" value="5">30</button>
+				<button type="button" onclick="speed1iso3('s15is')"id="s15is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="4">15</button>
+				<button type="button" onclick="speed1iso3('s8is')"id="s8is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="3">8</button>
+				<button type="button" onclick="speed1iso3('s4is')"id="s4is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="2">4</button>
+				<button type="button" onclick="speed1iso3('s2is')"id="s2is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="1">2</button>
+				<button type="button" onclick="speed1iso3('s1is')"id="s1is"class="butons"style="border-color:black;background:rgb(255,255,102);color:black" value="0">1</button>
+				<button type="button" onclick="speed1iso3('s12is')"id="s12is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-1">1/2</button>
+				<button type="button" onclick="speed1iso3('s14is')"id="s14is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-2">1/4</button>
+				<button type="button" onclick="speed1iso3('s18is')"id="s18is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-3">1/8</button>
+				<button type="button" onclick="speed1iso3('s115is')"id="s115is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-4">1/15</button>
+				<button type="button" onclick="speed1iso3('s130is')"id="s130is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-5">1/30</button>
+				<button type="button" onclick="speed1iso3('s160is')"id="s160is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-6">1/60</button>
+				<button type="button" onclick="speed1iso3('s1125is')"id="s1125is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-7">1/125</button>
+				<button type="button" onclick="speed1iso3('s1250is')"id="s1250is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-8">1/250</button>
+				<button type="button" onclick="speed1iso3('s1500is')"id="s1500is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-9">1/500</button>
+				<button type="button" onclick="speed1iso3('s11000is')"id="s11000is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-10">1/1000</button>
+				<button type="button" onclick="speed1iso3('s12000is')"id="s12000is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-11">1/2000</button>
+				<button type="button" onclick="speed1iso3('s14000is')"id="s14000is"class="butons"style="border-color:black;background:rgb(102,111,219);color:white" value="-12">1/4000</button>
+				<button type="button" onclick="speed1iso3('s18000is')"id="s18000is"class="butons"style="border-color:black;background:rgb(202,111,219);color:white" value="-13">1/8000</button>
+			</div>
+		</div>
+		<a id="paginaISOA"href="#paginaF"data-transition="pop"></a>
+		<input type="text" id="transferF3">
+		<input type="text" id="transferS3">
+		
+	</div>
+</div>
+
+
+
+</body>
+</html>
