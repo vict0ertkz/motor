@@ -58,7 +58,7 @@ html {
 	text-align:center;
 	background:rgb(32,111,219);
 	background-image:url(steleisoMare.png);
-	background-size:900%;
+	background-size:100%;
 	color:rgb(255,255,255);
 	text-decoration:none;
 	border-style:none;
@@ -103,7 +103,7 @@ html {
 	}
 #butonprincipalF{   
 	background:url(iris2.png);
-	background-size:1000%;
+	background-size:200%;
 	color:black;
 	border-style:none;
 	border-radius:100%;
