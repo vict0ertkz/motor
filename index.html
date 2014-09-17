@@ -543,7 +543,7 @@
    
    
 //citire senzor in lux 
-	document.addEventListener('devicelight', function(event) {
+	device.addEventListener('devicelight', function(event) {
         var lux = event.value;
 		if (lux ==0) 
 		lux= 1;
@@ -720,17 +720,17 @@ function calc1() {
 			var steleFpos =document.getElementById('butonisoF').style.width;
 			var irisFpos =document.getElementById('butonprincipalF').style.width;
             discF.style.webkitTransform = "rotate("+((parseInt(EV1F)*5)-72)+"deg)" ;
-		    irisF.style.webkitBackgroundPosition = ((-parseInt(EV1F)*parseInt(irisFpos))+(parseInt(irisFpos)*-0.010))+'px ';
+		    irisF.style.backgroundPosition = ((-parseInt(EV1F)*parseInt(irisFpos))+(parseInt(irisFpos)*-0.010))+'px ';
 			  if (EV1F>9)
 			     {
-			     irisF.style.webkitBackgroundPosition = ((-9*parseInt(irisFpos))+(parseInt(irisFpos)*-0.01))+'px ';
+			     irisF.style.backgroundPosition = ((-9*parseInt(irisFpos))+(parseInt(irisFpos)*-0.01))+'px ';
 				 };
 			  if (EV1F<1)
 			     {
-			     irisF.style.webkitBackgroundPosition = 0+'px ';
+			     irisF.style.backgroundPosition = 0+'px ';
 				 };
             document.getElementById('butonprincipalF').innerHTML= Fstop3;              
-            isoF1.style.webkitBackgroundPosition = (((-parseInt(ISOselectat1)-1)*parseInt(steleFpos))+(parseInt(steleFpos)*0.005))+'px ';
+            isoF1.style.backgroundPosition = (((-parseInt(ISOselectat1)-1)*parseInt(steleFpos))+(parseInt(steleFpos)*0.005))+'px ';
    }
    
    
