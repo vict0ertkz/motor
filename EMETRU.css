@@ -57,7 +57,7 @@ html {
 #butonisoF{
 	text-align:center;
 	background:rgb(32,111,219);
-	background-image:url(steleisoMare.png);
+	background-image:url(steleisoMare.PNG);
 	background-size:100%;
 	color:rgb(255,255,255);
 	text-decoration:none;
@@ -102,7 +102,7 @@ html {
 	z-index:90;
 	}
 #butonprincipalF{   
-	background:url(iris2.png);
+	background:url(iris2.PNG);
 
 	color:black;
 	border-style:none;
@@ -370,7 +370,7 @@ html {
 #butonisoS{
 	text-align:center;
 	background:rgb(32,111,219);
-	background-image:url(steleisoMare.png);
+	background-image:url(steleisoMare.PNG);
 	background-size:900%;
 	color:rgb(255,255,255);
 	text-decoration:none;
@@ -498,7 +498,7 @@ html {
 #butonfISO{
 	text-align:center;
 	background:rgb(32,111,219);
-	background-image:url(iris3a.png);
+	background-image:url(iris3a.PNG);
 	background-size:1000%;
 	color:rgb(255,255,255);
 	text-decoration:none;
@@ -543,7 +543,7 @@ html {
 	z-index:90;
 	}
 #butonprincipalISO{
-    background:url(steleiso.png);
+    background:url(steleiso.PNG);
 	background-size:900%;
 	color:black;
 	border-style:none;
