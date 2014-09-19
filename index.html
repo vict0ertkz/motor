@@ -825,7 +825,7 @@ function calc2() {
             var discS = document.getElementById('scalamobilaS'); 
 			var isoS = document.getElementById('butonisoS');
 			var steleSpos =document.getElementById('butonisoS').style.width;
-            discS.style.transform = "rotate("+((parseInt(EV2S)*5)-72)+"deg)" ;
+            discS.style.webkitTransform = "rotate("+((parseInt(EV2S)*5)-72)+"deg)" ;
 		    isoS.style.backgroundPosition = (((-parseInt(ISOselectat2)-1)*parseInt(steleSpos))+(parseInt(steleSpos)*0.005))+'px ';
                          
            
@@ -859,7 +859,7 @@ function calc3() {
 				var ISOstop3 = 100*(Math.pow(2,-EV3ISO));
 				
 				var discISO = document.getElementById('scalamobilaISO'); 
-				discISO.style.transform = "rotate("+((parseInt(EV3ISO)*5)-13.5)+"deg)" ;
+				discISO.style.webkitTransform = "rotate("+((parseInt(EV3ISO)*5)-13.5)+"deg)" ;
 				
 				var isoISO = document.getElementById('butonprincipalISO');
 				var steleISOpos =document.getElementById('butonprincipalISO').style.width;
