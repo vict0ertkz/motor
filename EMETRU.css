@@ -132,6 +132,30 @@ html {
 	position:relative;
 	z-index: 95;
 }
+#helpF{
+
+	background:url(cevax16.png);
+	position: relative;
+	background-size:100% ;
+    background-repeat: no-repeat;	
+	z-index:100;
+}
+#helpS{
+
+	background:url(cevax16.png);
+	position: relative;
+	background-size:100% ;
+    background-repeat: no-repeat;	
+	z-index:100;
+}
+#helpISO{
+
+	background:url(cevax16.png);
+	position: relative;
+	background-size:100% ;
+    background-repeat: no-repeat;	
+	z-index:100;
+}
 
 #containerselectFISO{
 	background:rgba(75,75,75,0.2);
