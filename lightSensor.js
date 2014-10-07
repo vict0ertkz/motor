@@ -1,4 +1,4 @@
-define("cordova/plugin/lightSensor", function(require, exports, module) {
+define("lightSensor", function(require, exports, module) {
 
 /**
  * This class provides access to device accelerometer data.
