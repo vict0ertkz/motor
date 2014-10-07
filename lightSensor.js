@@ -25,7 +25,7 @@ var light = null;
 function start() {
     exec(function(a) {
         var tempListeners = listeners.slice(0);
-        light = new LightValues(a.lux, a.timestamp);
+        light = new LightValues(a.x, a.timestamp);
         for (var i = 0, l = tempListeners.length; i < l; i++) {
             tempListeners[i].win(light);
         }
