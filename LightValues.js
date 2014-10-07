@@ -1,7 +1,7 @@
 define("LightValues", function(require, exports, module) {
 
-var Acceleration = function(lux, timestamp) {
-    this.lux = lux;
+var LightValues = function(x, timestamp) {
+    this.x = x;
     this.timestamp = timestamp || (new Date()).getTime();
 };
 
